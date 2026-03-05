@@ -1,14 +1,54 @@
-public class stepoops{
+public class OOPSBannerApp {
+
     public static void main(String[] args) {
 
-        // Hint: Use String.join(" ", ...) to join the parts of each line with spaces.
-        System.out.println(String.join("   ", "   ***  ", "   ***  ", "  *****  ", "  ***** "));
-        System.out.println(String.join("   ", " **   **", " **   **", " **   **", " **     "));
-        System.out.println(String.join("   ", "**     **", "**     **", "**   **", "**      "));
-        System.out.println(String.join("   ", "**     **", "**     **", "*****   ", " *****  "));
-        System.out.println(String.join("   ", "**     **", "**     **", "**      ", "      **"));
-        System.out.println(String.join("   ", " **   ** ", " **   ** ", "**      ", " **   **"));
-        System.out.println(String.join("   ", "  ***    ", "  ***    ", "**      ", "   ***   "));
+        String[] oPattern = getOPattern();
+        String[] pPattern = getPPattern();
+        String[] sPattern = getSPattern();
 
+        for (int i = 0; i < oPattern.length; i++) {
+            System.out.println(
+                    oPattern[i] + "   " +
+                    oPattern[i] + "   " +
+                    pPattern[i] + "   " +
+                    sPattern[i]
+            );
+        }
+    }
+
+    public static String[] getOPattern() {
+        return new String[]{
+                "   ******  ",
+                " **      ** ",
+                "**        **",
+                "**        **",
+                "**        **",
+                " **      ** ",
+                "   ******  "
+        };
+    }
+
+    public static String[] getPPattern() {
+        return new String[]{
+                "  ******   ",
+                "**     ** ",
+                "**     ** ",
+                "******   ",
+                "**        ",
+                "**        ",
+                "**        "
+        };
+    }
+
+    public static String[] getSPattern() {
+        return new String[]{
+                "  ****** ",
+                " **      ",
+                " **      ",
+                "  ****** ",
+                "      ** ",
+                "      ** ",
+                "   ******  "
+        };
     }
 }
